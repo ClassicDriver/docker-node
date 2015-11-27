@@ -1,12 +1,13 @@
 = Debian (Wheezy) NodeJS Docker Image
 
 == Introduction
-This is a basic debian (wheezy) docker image with node installed
+This is a Debian (Wheezy) docker image with NodeJS/NPM installed
 
-== Name
-The image name will be
+== Name/Tag
+The naming strategy will be <organisation>/<os-distribution>-<os-version>-<feature>:<version-tag>.
+The 'version-tag' is optional
 ....
-classicdriver/debian-wheezy-node<NODE-VERSION>
+classicdriver/debian-wheezy-node:<NODE-VERSION>
 ....
 
 == How to BUILD this image
@@ -23,22 +24,22 @@ cd <parent-folder>
 . Build the docker image with the command
 +
 ....
-docker build --rm=true --tag=classicdriver/debian-wheezy-node5.0.0 docker-debian-wheezy-node/.
+docker build --rm=true --tag=classicdriver/debian-wheezy-node:5.x docker-debian-wheezy-node/.
 ....
 . Test the docker image by running the command
 +
 ....
-docker run -it --rm=true classicdriver/debian-wheezy-node5.0.0
+docker run -it --rm=true classicdriver/debian-wheezy-node:5.x
 ....
 . The console will be attached to the running container
 . Run the following command
 +
 ....
-node -v5.0.0
+node -v
 ....
 .. The output should be something like the following
 +
 ....
-v5.0.0
+v5.x
 ....
 . Exit the container
