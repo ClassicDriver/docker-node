@@ -1,7 +1,7 @@
 ##########################################################################################
 # ClassicDriver Base Docker image with NodeJs
 ##########################################################################################
-FROM classicdriver/debian-wheezy-base
+FROM classicdriver/base
 
 MAINTAINER Team Nitrous <nitrous@classicdriver.com>
 
